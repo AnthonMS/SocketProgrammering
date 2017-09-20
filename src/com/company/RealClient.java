@@ -22,6 +22,9 @@ public class RealClient
 
                 PrintWriter out = new PrintWriter(outputStream, true);
 
+                String welcome = streamScanner.nextLine();
+                System.out.println(welcome);
+
                 Scanner inputScanner = new Scanner(System.in);
                 System.out.println("Write something: ");
 
@@ -39,6 +42,7 @@ public class RealClient
                     {
                         // Når vi skriver, sender vi en linj emed PrintWriter
                         out.println(stream);
+                        System.out.println(stream);
                     }
                 }
 

@@ -46,7 +46,7 @@ public class Server
                 PrintWriter out = new PrintWriter(output, true);
 
 
-                //System.out.println("Velkommen!");
+                out.println("Velkommen!");
 
                 boolean done = false;
                 while (!done && in.hasNextLine())
@@ -61,7 +61,6 @@ public class Server
                     {
                         // Når vi skriver, sender vi en linj emed PrintWriter
                         System.out.println("From client: " + stream);
-                        out.println(stream);
                     }
                 }
 
