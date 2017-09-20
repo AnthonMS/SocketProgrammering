@@ -45,21 +45,23 @@ public class Server
                 // Når vi skriver til output streamen bruger vi her en PrintWriter
                 PrintWriter out = new PrintWriter(output, true);
 
-                System.out.println("Velkommen!");
+
+                //System.out.println("Velkommen!");
 
                 boolean done = false;
                 while (!done && in.hasNextLine())
                 {
                     // Her starter scanneren arbejde
                     String stream = in.nextLine();
-                    if (stream.equals("Luk ned"))
+                    if (stream.equals("Close now"))
                     {
                         done = true;
                     }
                     else
                     {
                         // Når vi skriver, sender vi en linj emed PrintWriter
-                        System.out.println(stream);
+                        System.out.println("From client: " + stream);
+                        out.println(stream);
                     }
                 }
 
